@@ -1,0 +1,5 @@
+/home/ubuntu/Desktop/PKI/build/CMakeFiles/scrypt_crypto.dir
+/home/ubuntu/Desktop/PKI/build/CMakeFiles/run_demo.dir
+/home/ubuntu/Desktop/PKI/build/CMakeFiles/test_scrypt.dir
+/home/ubuntu/Desktop/PKI/build/CMakeFiles/edit_cache.dir
+/home/ubuntu/Desktop/PKI/build/CMakeFiles/rebuild_cache.dir

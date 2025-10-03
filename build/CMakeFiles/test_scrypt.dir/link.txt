@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/test_scrypt.dir/src/test_scrypt.o -o test_scrypt   -L/home/ubuntu/Desktop/PKI/build  libscrypt_crypto.a -lcheck_pic -lrt -lm -lsubunit /usr/lib/x86_64-linux-gnu/libcrypto.so 

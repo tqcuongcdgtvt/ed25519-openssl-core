@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/run_demo.dir/examples/main.o -o run_demo  libscrypt_crypto.a /usr/lib/x86_64-linux-gnu/libcrypto.so 
