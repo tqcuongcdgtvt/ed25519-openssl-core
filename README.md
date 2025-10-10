@@ -1,3 +1,6 @@
+
+Thực hiện giai đoạn đầu - test từng test case
+
 # ed25519-openssl-core
 
 Kết quả Kiểm tra và Demo
