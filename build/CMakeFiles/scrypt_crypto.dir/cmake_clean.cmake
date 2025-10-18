@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/scrypt_crypto.dir/src/backend_openssl.o"
-  "CMakeFiles/scrypt_crypto.dir/src/backend_openssl.o.d"
-  "CMakeFiles/scrypt_crypto.dir/src/scrypt.o"
-  "CMakeFiles/scrypt_crypto.dir/src/scrypt.o.d"
-  "libscrypt_crypto.a"
+  "CMakeFiles/scrypt_crypto.dir/src/backend_openssl.c.o"
+  "CMakeFiles/scrypt_crypto.dir/src/backend_openssl.c.o.d"
+  "CMakeFiles/scrypt_crypto.dir/src/scrypt.c.o"
+  "CMakeFiles/scrypt_crypto.dir/src/scrypt.c.o.d"
   "libscrypt_crypto.pdb"
+  "libscrypt_crypto.so"
 )
 
 # Per-language clean rules from dependency scanning.

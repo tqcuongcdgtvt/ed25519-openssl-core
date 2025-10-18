@@ -65,6 +65,26 @@ CMAKE_BINARY_DIR = /home/ubuntu/Desktop/PKI/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool..."
+	/usr/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
+
+# Special rule for the target package
+package/fast: package
+.PHONY : package/fast
+
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool for source..."
+	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/ubuntu/Desktop/PKI/build/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+.PHONY : package_source/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
@@ -84,6 +104,51 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -115,6 +180,19 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named scrypt_crypto_static
+
+# Build rule for target.
+scrypt_crypto_static: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scrypt_crypto_static
+.PHONY : scrypt_crypto_static
+
+# fast build rule for target.
+scrypt_crypto_static/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scrypt_crypto_static.dir/build.make CMakeFiles/scrypt_crypto_static.dir/build
+.PHONY : scrypt_crypto_static/fast
 
 #=============================================================================
 # Target rules for targets named scrypt_crypto
@@ -155,65 +233,292 @@ test_scrypt/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_scrypt.dir/build.make CMakeFiles/test_scrypt.dir/build
 .PHONY : test_scrypt/fast
 
-# target to build an object file
-examples/main.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_demo.dir/build.make CMakeFiles/run_demo.dir/examples/main.o
+#=============================================================================
+# Target rules for targets named boundary_test
+
+# Build rule for target.
+boundary_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 boundary_test
+.PHONY : boundary_test
+
+# fast build rule for target.
+boundary_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/boundary_test.dir/build.make CMakeFiles/boundary_test.dir/build
+.PHONY : boundary_test/fast
+
+#=============================================================================
+# Target rules for targets named interoperability_test
+
+# Build rule for target.
+interoperability_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 interoperability_test
+.PHONY : interoperability_test
+
+# fast build rule for target.
+interoperability_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interoperability_test.dir/build.make CMakeFiles/interoperability_test.dir/build
+.PHONY : interoperability_test/fast
+
+#=============================================================================
+# Target rules for targets named memory_leak_test
+
+# Build rule for target.
+memory_leak_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 memory_leak_test
+.PHONY : memory_leak_test
+
+# fast build rule for target.
+memory_leak_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/memory_leak_test.dir/build.make CMakeFiles/memory_leak_test.dir/build
+.PHONY : memory_leak_test/fast
+
+#=============================================================================
+# Target rules for targets named thread_safety_test
+
+# Build rule for target.
+thread_safety_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 thread_safety_test
+.PHONY : thread_safety_test
+
+# fast build rule for target.
+thread_safety_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/thread_safety_test.dir/build.make CMakeFiles/thread_safety_test.dir/build
+.PHONY : thread_safety_test/fast
+
+#=============================================================================
+# Target rules for targets named benchmark_test
+
+# Build rule for target.
+benchmark_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 benchmark_test
+.PHONY : benchmark_test
+
+# fast build rule for target.
+benchmark_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_test.dir/build.make CMakeFiles/benchmark_test.dir/build
+.PHONY : benchmark_test/fast
+
+examples/main.o: examples/main.c.o
 .PHONY : examples/main.o
 
-# target to preprocess a source file
-examples/main.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_demo.dir/build.make CMakeFiles/run_demo.dir/examples/main.i
+# target to build an object file
+examples/main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_demo.dir/build.make CMakeFiles/run_demo.dir/examples/main.c.o
+.PHONY : examples/main.c.o
+
+examples/main.i: examples/main.c.i
 .PHONY : examples/main.i
 
-# target to generate assembly for a file
-examples/main.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_demo.dir/build.make CMakeFiles/run_demo.dir/examples/main.s
+# target to preprocess a source file
+examples/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_demo.dir/build.make CMakeFiles/run_demo.dir/examples/main.c.i
+.PHONY : examples/main.c.i
+
+examples/main.s: examples/main.c.s
 .PHONY : examples/main.s
 
-# target to build an object file
-src/backend_openssl.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/scrypt_crypto.dir/build.make CMakeFiles/scrypt_crypto.dir/src/backend_openssl.o
+# target to generate assembly for a file
+examples/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_demo.dir/build.make CMakeFiles/run_demo.dir/examples/main.c.s
+.PHONY : examples/main.c.s
+
+src/backend_openssl.o: src/backend_openssl.c.o
 .PHONY : src/backend_openssl.o
 
-# target to preprocess a source file
-src/backend_openssl.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/scrypt_crypto.dir/build.make CMakeFiles/scrypt_crypto.dir/src/backend_openssl.i
+# target to build an object file
+src/backend_openssl.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scrypt_crypto_static.dir/build.make CMakeFiles/scrypt_crypto_static.dir/src/backend_openssl.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scrypt_crypto.dir/build.make CMakeFiles/scrypt_crypto.dir/src/backend_openssl.c.o
+.PHONY : src/backend_openssl.c.o
+
+src/backend_openssl.i: src/backend_openssl.c.i
 .PHONY : src/backend_openssl.i
 
-# target to generate assembly for a file
-src/backend_openssl.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/scrypt_crypto.dir/build.make CMakeFiles/scrypt_crypto.dir/src/backend_openssl.s
+# target to preprocess a source file
+src/backend_openssl.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scrypt_crypto_static.dir/build.make CMakeFiles/scrypt_crypto_static.dir/src/backend_openssl.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scrypt_crypto.dir/build.make CMakeFiles/scrypt_crypto.dir/src/backend_openssl.c.i
+.PHONY : src/backend_openssl.c.i
+
+src/backend_openssl.s: src/backend_openssl.c.s
 .PHONY : src/backend_openssl.s
 
-# target to build an object file
-src/scrypt.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/scrypt_crypto.dir/build.make CMakeFiles/scrypt_crypto.dir/src/scrypt.o
+# target to generate assembly for a file
+src/backend_openssl.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scrypt_crypto_static.dir/build.make CMakeFiles/scrypt_crypto_static.dir/src/backend_openssl.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scrypt_crypto.dir/build.make CMakeFiles/scrypt_crypto.dir/src/backend_openssl.c.s
+.PHONY : src/backend_openssl.c.s
+
+src/scrypt.o: src/scrypt.c.o
 .PHONY : src/scrypt.o
 
-# target to preprocess a source file
-src/scrypt.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/scrypt_crypto.dir/build.make CMakeFiles/scrypt_crypto.dir/src/scrypt.i
+# target to build an object file
+src/scrypt.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scrypt_crypto_static.dir/build.make CMakeFiles/scrypt_crypto_static.dir/src/scrypt.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scrypt_crypto.dir/build.make CMakeFiles/scrypt_crypto.dir/src/scrypt.c.o
+.PHONY : src/scrypt.c.o
+
+src/scrypt.i: src/scrypt.c.i
 .PHONY : src/scrypt.i
 
-# target to generate assembly for a file
-src/scrypt.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/scrypt_crypto.dir/build.make CMakeFiles/scrypt_crypto.dir/src/scrypt.s
+# target to preprocess a source file
+src/scrypt.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scrypt_crypto_static.dir/build.make CMakeFiles/scrypt_crypto_static.dir/src/scrypt.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scrypt_crypto.dir/build.make CMakeFiles/scrypt_crypto.dir/src/scrypt.c.i
+.PHONY : src/scrypt.c.i
+
+src/scrypt.s: src/scrypt.c.s
 .PHONY : src/scrypt.s
 
-# target to build an object file
-src/test_scrypt.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_scrypt.dir/build.make CMakeFiles/test_scrypt.dir/src/test_scrypt.o
+# target to generate assembly for a file
+src/scrypt.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scrypt_crypto_static.dir/build.make CMakeFiles/scrypt_crypto_static.dir/src/scrypt.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scrypt_crypto.dir/build.make CMakeFiles/scrypt_crypto.dir/src/scrypt.c.s
+.PHONY : src/scrypt.c.s
+
+src/test_scrypt.o: src/test_scrypt.c.o
 .PHONY : src/test_scrypt.o
 
-# target to preprocess a source file
-src/test_scrypt.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_scrypt.dir/build.make CMakeFiles/test_scrypt.dir/src/test_scrypt.i
+# target to build an object file
+src/test_scrypt.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_scrypt.dir/build.make CMakeFiles/test_scrypt.dir/src/test_scrypt.c.o
+.PHONY : src/test_scrypt.c.o
+
+src/test_scrypt.i: src/test_scrypt.c.i
 .PHONY : src/test_scrypt.i
 
-# target to generate assembly for a file
-src/test_scrypt.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_scrypt.dir/build.make CMakeFiles/test_scrypt.dir/src/test_scrypt.s
+# target to preprocess a source file
+src/test_scrypt.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_scrypt.dir/build.make CMakeFiles/test_scrypt.dir/src/test_scrypt.c.i
+.PHONY : src/test_scrypt.c.i
+
+src/test_scrypt.s: src/test_scrypt.c.s
 .PHONY : src/test_scrypt.s
+
+# target to generate assembly for a file
+src/test_scrypt.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_scrypt.dir/build.make CMakeFiles/test_scrypt.dir/src/test_scrypt.c.s
+.PHONY : src/test_scrypt.c.s
+
+tests/benchmark_test.o: tests/benchmark_test.c.o
+.PHONY : tests/benchmark_test.o
+
+# target to build an object file
+tests/benchmark_test.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_test.dir/build.make CMakeFiles/benchmark_test.dir/tests/benchmark_test.c.o
+.PHONY : tests/benchmark_test.c.o
+
+tests/benchmark_test.i: tests/benchmark_test.c.i
+.PHONY : tests/benchmark_test.i
+
+# target to preprocess a source file
+tests/benchmark_test.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_test.dir/build.make CMakeFiles/benchmark_test.dir/tests/benchmark_test.c.i
+.PHONY : tests/benchmark_test.c.i
+
+tests/benchmark_test.s: tests/benchmark_test.c.s
+.PHONY : tests/benchmark_test.s
+
+# target to generate assembly for a file
+tests/benchmark_test.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_test.dir/build.make CMakeFiles/benchmark_test.dir/tests/benchmark_test.c.s
+.PHONY : tests/benchmark_test.c.s
+
+tests/boundary_test.o: tests/boundary_test.c.o
+.PHONY : tests/boundary_test.o
+
+# target to build an object file
+tests/boundary_test.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/boundary_test.dir/build.make CMakeFiles/boundary_test.dir/tests/boundary_test.c.o
+.PHONY : tests/boundary_test.c.o
+
+tests/boundary_test.i: tests/boundary_test.c.i
+.PHONY : tests/boundary_test.i
+
+# target to preprocess a source file
+tests/boundary_test.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/boundary_test.dir/build.make CMakeFiles/boundary_test.dir/tests/boundary_test.c.i
+.PHONY : tests/boundary_test.c.i
+
+tests/boundary_test.s: tests/boundary_test.c.s
+.PHONY : tests/boundary_test.s
+
+# target to generate assembly for a file
+tests/boundary_test.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/boundary_test.dir/build.make CMakeFiles/boundary_test.dir/tests/boundary_test.c.s
+.PHONY : tests/boundary_test.c.s
+
+tests/interoperability_test.o: tests/interoperability_test.c.o
+.PHONY : tests/interoperability_test.o
+
+# target to build an object file
+tests/interoperability_test.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interoperability_test.dir/build.make CMakeFiles/interoperability_test.dir/tests/interoperability_test.c.o
+.PHONY : tests/interoperability_test.c.o
+
+tests/interoperability_test.i: tests/interoperability_test.c.i
+.PHONY : tests/interoperability_test.i
+
+# target to preprocess a source file
+tests/interoperability_test.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interoperability_test.dir/build.make CMakeFiles/interoperability_test.dir/tests/interoperability_test.c.i
+.PHONY : tests/interoperability_test.c.i
+
+tests/interoperability_test.s: tests/interoperability_test.c.s
+.PHONY : tests/interoperability_test.s
+
+# target to generate assembly for a file
+tests/interoperability_test.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interoperability_test.dir/build.make CMakeFiles/interoperability_test.dir/tests/interoperability_test.c.s
+.PHONY : tests/interoperability_test.c.s
+
+tests/memory_leak_test.o: tests/memory_leak_test.c.o
+.PHONY : tests/memory_leak_test.o
+
+# target to build an object file
+tests/memory_leak_test.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/memory_leak_test.dir/build.make CMakeFiles/memory_leak_test.dir/tests/memory_leak_test.c.o
+.PHONY : tests/memory_leak_test.c.o
+
+tests/memory_leak_test.i: tests/memory_leak_test.c.i
+.PHONY : tests/memory_leak_test.i
+
+# target to preprocess a source file
+tests/memory_leak_test.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/memory_leak_test.dir/build.make CMakeFiles/memory_leak_test.dir/tests/memory_leak_test.c.i
+.PHONY : tests/memory_leak_test.c.i
+
+tests/memory_leak_test.s: tests/memory_leak_test.c.s
+.PHONY : tests/memory_leak_test.s
+
+# target to generate assembly for a file
+tests/memory_leak_test.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/memory_leak_test.dir/build.make CMakeFiles/memory_leak_test.dir/tests/memory_leak_test.c.s
+.PHONY : tests/memory_leak_test.c.s
+
+tests/thread_safety_test.o: tests/thread_safety_test.c.o
+.PHONY : tests/thread_safety_test.o
+
+# target to build an object file
+tests/thread_safety_test.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/thread_safety_test.dir/build.make CMakeFiles/thread_safety_test.dir/tests/thread_safety_test.c.o
+.PHONY : tests/thread_safety_test.c.o
+
+tests/thread_safety_test.i: tests/thread_safety_test.c.i
+.PHONY : tests/thread_safety_test.i
+
+# target to preprocess a source file
+tests/thread_safety_test.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/thread_safety_test.dir/build.make CMakeFiles/thread_safety_test.dir/tests/thread_safety_test.c.i
+.PHONY : tests/thread_safety_test.c.i
+
+tests/thread_safety_test.s: tests/thread_safety_test.c.s
+.PHONY : tests/thread_safety_test.s
+
+# target to generate assembly for a file
+tests/thread_safety_test.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/thread_safety_test.dir/build.make CMakeFiles/thread_safety_test.dir/tests/thread_safety_test.c.s
+.PHONY : tests/thread_safety_test.c.s
 
 # Help Target
 help:
@@ -222,10 +527,22 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
+	@echo "... package"
+	@echo "... package_source"
 	@echo "... rebuild_cache"
+	@echo "... benchmark_test"
+	@echo "... boundary_test"
+	@echo "... interoperability_test"
+	@echo "... memory_leak_test"
 	@echo "... run_demo"
 	@echo "... scrypt_crypto"
+	@echo "... scrypt_crypto_static"
 	@echo "... test_scrypt"
+	@echo "... thread_safety_test"
 	@echo "... examples/main.o"
 	@echo "... examples/main.i"
 	@echo "... examples/main.s"
@@ -238,6 +555,21 @@ help:
 	@echo "... src/test_scrypt.o"
 	@echo "... src/test_scrypt.i"
 	@echo "... src/test_scrypt.s"
+	@echo "... tests/benchmark_test.o"
+	@echo "... tests/benchmark_test.i"
+	@echo "... tests/benchmark_test.s"
+	@echo "... tests/boundary_test.o"
+	@echo "... tests/boundary_test.i"
+	@echo "... tests/boundary_test.s"
+	@echo "... tests/interoperability_test.o"
+	@echo "... tests/interoperability_test.i"
+	@echo "... tests/interoperability_test.s"
+	@echo "... tests/memory_leak_test.o"
+	@echo "... tests/memory_leak_test.i"
+	@echo "... tests/memory_leak_test.s"
+	@echo "... tests/thread_safety_test.o"
+	@echo "... tests/thread_safety_test.i"
+	@echo "... tests/thread_safety_test.s"
 .PHONY : help
 
 

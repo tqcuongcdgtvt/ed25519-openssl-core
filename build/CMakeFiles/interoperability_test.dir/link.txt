@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/interoperability_test.dir/tests/interoperability_test.c.o -o interoperability_test  libscrypt_crypto_static.a -lcheck_pic -lrt -lm -lsubunit /usr/lib/x86_64-linux-gnu/libsodium.so /usr/lib/x86_64-linux-gnu/libcrypto.so 

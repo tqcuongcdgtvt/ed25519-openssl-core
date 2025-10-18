@@ -1,2 +1,1 @@
-/usr/bin/ar qc libscrypt_crypto.a CMakeFiles/scrypt_crypto.dir/src/scrypt.o CMakeFiles/scrypt_crypto.dir/src/backend_openssl.o
-/usr/bin/ranlib libscrypt_crypto.a
+/usr/bin/cc -fPIC -g -shared -Wl,-soname,libscrypt_crypto.so -o libscrypt_crypto.so CMakeFiles/scrypt_crypto.dir/src/scrypt.c.o CMakeFiles/scrypt_crypto.dir/src/backend_openssl.c.o  /usr/lib/x86_64-linux-gnu/libcrypto.so 

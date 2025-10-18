@@ -1,0 +1,1 @@
+/usr/bin/cc -g -pthread CMakeFiles/benchmark_test.dir/tests/benchmark_test.c.o -o benchmark_test  libscrypt_crypto_static.a -lcheck_pic -lrt -lm -lsubunit /usr/lib/x86_64-linux-gnu/libcrypto.so 

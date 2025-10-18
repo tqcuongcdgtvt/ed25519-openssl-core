@@ -69,52 +69,52 @@ include CMakeFiles/scrypt_crypto.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/scrypt_crypto.dir/flags.make
 
-CMakeFiles/scrypt_crypto.dir/src/scrypt.o: CMakeFiles/scrypt_crypto.dir/flags.make
-CMakeFiles/scrypt_crypto.dir/src/scrypt.o: /home/ubuntu/Desktop/PKI/src/scrypt.c
-CMakeFiles/scrypt_crypto.dir/src/scrypt.o: CMakeFiles/scrypt_crypto.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ubuntu/Desktop/PKI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/scrypt_crypto.dir/src/scrypt.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/scrypt_crypto.dir/src/scrypt.o -MF CMakeFiles/scrypt_crypto.dir/src/scrypt.o.d -o CMakeFiles/scrypt_crypto.dir/src/scrypt.o -c /home/ubuntu/Desktop/PKI/src/scrypt.c
+CMakeFiles/scrypt_crypto.dir/src/scrypt.c.o: CMakeFiles/scrypt_crypto.dir/flags.make
+CMakeFiles/scrypt_crypto.dir/src/scrypt.c.o: /home/ubuntu/Desktop/PKI/src/scrypt.c
+CMakeFiles/scrypt_crypto.dir/src/scrypt.c.o: CMakeFiles/scrypt_crypto.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ubuntu/Desktop/PKI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/scrypt_crypto.dir/src/scrypt.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/scrypt_crypto.dir/src/scrypt.c.o -MF CMakeFiles/scrypt_crypto.dir/src/scrypt.c.o.d -o CMakeFiles/scrypt_crypto.dir/src/scrypt.c.o -c /home/ubuntu/Desktop/PKI/src/scrypt.c
 
-CMakeFiles/scrypt_crypto.dir/src/scrypt.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/scrypt_crypto.dir/src/scrypt.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ubuntu/Desktop/PKI/src/scrypt.c > CMakeFiles/scrypt_crypto.dir/src/scrypt.i
+CMakeFiles/scrypt_crypto.dir/src/scrypt.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/scrypt_crypto.dir/src/scrypt.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ubuntu/Desktop/PKI/src/scrypt.c > CMakeFiles/scrypt_crypto.dir/src/scrypt.c.i
 
-CMakeFiles/scrypt_crypto.dir/src/scrypt.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/scrypt_crypto.dir/src/scrypt.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ubuntu/Desktop/PKI/src/scrypt.c -o CMakeFiles/scrypt_crypto.dir/src/scrypt.s
+CMakeFiles/scrypt_crypto.dir/src/scrypt.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/scrypt_crypto.dir/src/scrypt.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ubuntu/Desktop/PKI/src/scrypt.c -o CMakeFiles/scrypt_crypto.dir/src/scrypt.c.s
 
-CMakeFiles/scrypt_crypto.dir/src/backend_openssl.o: CMakeFiles/scrypt_crypto.dir/flags.make
-CMakeFiles/scrypt_crypto.dir/src/backend_openssl.o: /home/ubuntu/Desktop/PKI/src/backend_openssl.c
-CMakeFiles/scrypt_crypto.dir/src/backend_openssl.o: CMakeFiles/scrypt_crypto.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ubuntu/Desktop/PKI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/scrypt_crypto.dir/src/backend_openssl.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/scrypt_crypto.dir/src/backend_openssl.o -MF CMakeFiles/scrypt_crypto.dir/src/backend_openssl.o.d -o CMakeFiles/scrypt_crypto.dir/src/backend_openssl.o -c /home/ubuntu/Desktop/PKI/src/backend_openssl.c
+CMakeFiles/scrypt_crypto.dir/src/backend_openssl.c.o: CMakeFiles/scrypt_crypto.dir/flags.make
+CMakeFiles/scrypt_crypto.dir/src/backend_openssl.c.o: /home/ubuntu/Desktop/PKI/src/backend_openssl.c
+CMakeFiles/scrypt_crypto.dir/src/backend_openssl.c.o: CMakeFiles/scrypt_crypto.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ubuntu/Desktop/PKI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/scrypt_crypto.dir/src/backend_openssl.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/scrypt_crypto.dir/src/backend_openssl.c.o -MF CMakeFiles/scrypt_crypto.dir/src/backend_openssl.c.o.d -o CMakeFiles/scrypt_crypto.dir/src/backend_openssl.c.o -c /home/ubuntu/Desktop/PKI/src/backend_openssl.c
 
-CMakeFiles/scrypt_crypto.dir/src/backend_openssl.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/scrypt_crypto.dir/src/backend_openssl.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ubuntu/Desktop/PKI/src/backend_openssl.c > CMakeFiles/scrypt_crypto.dir/src/backend_openssl.i
+CMakeFiles/scrypt_crypto.dir/src/backend_openssl.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/scrypt_crypto.dir/src/backend_openssl.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ubuntu/Desktop/PKI/src/backend_openssl.c > CMakeFiles/scrypt_crypto.dir/src/backend_openssl.c.i
 
-CMakeFiles/scrypt_crypto.dir/src/backend_openssl.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/scrypt_crypto.dir/src/backend_openssl.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ubuntu/Desktop/PKI/src/backend_openssl.c -o CMakeFiles/scrypt_crypto.dir/src/backend_openssl.s
+CMakeFiles/scrypt_crypto.dir/src/backend_openssl.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/scrypt_crypto.dir/src/backend_openssl.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ubuntu/Desktop/PKI/src/backend_openssl.c -o CMakeFiles/scrypt_crypto.dir/src/backend_openssl.c.s
 
 # Object files for target scrypt_crypto
 scrypt_crypto_OBJECTS = \
-"CMakeFiles/scrypt_crypto.dir/src/scrypt.o" \
-"CMakeFiles/scrypt_crypto.dir/src/backend_openssl.o"
+"CMakeFiles/scrypt_crypto.dir/src/scrypt.c.o" \
+"CMakeFiles/scrypt_crypto.dir/src/backend_openssl.c.o"
 
 # External object files for target scrypt_crypto
 scrypt_crypto_EXTERNAL_OBJECTS =
 
-libscrypt_crypto.a: CMakeFiles/scrypt_crypto.dir/src/scrypt.o
-libscrypt_crypto.a: CMakeFiles/scrypt_crypto.dir/src/backend_openssl.o
-libscrypt_crypto.a: CMakeFiles/scrypt_crypto.dir/build.make
-libscrypt_crypto.a: CMakeFiles/scrypt_crypto.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ubuntu/Desktop/PKI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C static library libscrypt_crypto.a"
-	$(CMAKE_COMMAND) -P CMakeFiles/scrypt_crypto.dir/cmake_clean_target.cmake
+libscrypt_crypto.so: CMakeFiles/scrypt_crypto.dir/src/scrypt.c.o
+libscrypt_crypto.so: CMakeFiles/scrypt_crypto.dir/src/backend_openssl.c.o
+libscrypt_crypto.so: CMakeFiles/scrypt_crypto.dir/build.make
+libscrypt_crypto.so: /usr/lib/x86_64-linux-gnu/libcrypto.so
+libscrypt_crypto.so: CMakeFiles/scrypt_crypto.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ubuntu/Desktop/PKI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C shared library libscrypt_crypto.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/scrypt_crypto.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/scrypt_crypto.dir/build: libscrypt_crypto.a
+CMakeFiles/scrypt_crypto.dir/build: libscrypt_crypto.so
 .PHONY : CMakeFiles/scrypt_crypto.dir/build
 
 CMakeFiles/scrypt_crypto.dir/clean:

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libscrypt_crypto_static.a CMakeFiles/scrypt_crypto_static.dir/src/scrypt.c.o CMakeFiles/scrypt_crypto_static.dir/src/backend_openssl.c.o
+/usr/bin/ranlib libscrypt_crypto_static.a

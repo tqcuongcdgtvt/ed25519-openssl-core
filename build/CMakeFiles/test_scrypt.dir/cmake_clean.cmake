@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/test_scrypt.dir/src/test_scrypt.o"
-  "CMakeFiles/test_scrypt.dir/src/test_scrypt.o.d"
+  "CMakeFiles/test_scrypt.dir/src/test_scrypt.c.o"
+  "CMakeFiles/test_scrypt.dir/src/test_scrypt.c.o.d"
   "test_scrypt"
   "test_scrypt.pdb"
 )

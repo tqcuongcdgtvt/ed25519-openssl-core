@@ -6,5 +6,5 @@ C_DEFINES =
 
 C_INCLUDES = -I/home/ubuntu/Desktop/PKI/include
 
-C_FLAGS = 
+C_FLAGS = -g
 

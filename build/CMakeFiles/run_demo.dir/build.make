@@ -69,30 +69,30 @@ include CMakeFiles/run_demo.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/run_demo.dir/flags.make
 
-CMakeFiles/run_demo.dir/examples/main.o: CMakeFiles/run_demo.dir/flags.make
-CMakeFiles/run_demo.dir/examples/main.o: /home/ubuntu/Desktop/PKI/examples/main.c
-CMakeFiles/run_demo.dir/examples/main.o: CMakeFiles/run_demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ubuntu/Desktop/PKI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/run_demo.dir/examples/main.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/run_demo.dir/examples/main.o -MF CMakeFiles/run_demo.dir/examples/main.o.d -o CMakeFiles/run_demo.dir/examples/main.o -c /home/ubuntu/Desktop/PKI/examples/main.c
+CMakeFiles/run_demo.dir/examples/main.c.o: CMakeFiles/run_demo.dir/flags.make
+CMakeFiles/run_demo.dir/examples/main.c.o: /home/ubuntu/Desktop/PKI/examples/main.c
+CMakeFiles/run_demo.dir/examples/main.c.o: CMakeFiles/run_demo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ubuntu/Desktop/PKI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/run_demo.dir/examples/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/run_demo.dir/examples/main.c.o -MF CMakeFiles/run_demo.dir/examples/main.c.o.d -o CMakeFiles/run_demo.dir/examples/main.c.o -c /home/ubuntu/Desktop/PKI/examples/main.c
 
-CMakeFiles/run_demo.dir/examples/main.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/run_demo.dir/examples/main.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ubuntu/Desktop/PKI/examples/main.c > CMakeFiles/run_demo.dir/examples/main.i
+CMakeFiles/run_demo.dir/examples/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/run_demo.dir/examples/main.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ubuntu/Desktop/PKI/examples/main.c > CMakeFiles/run_demo.dir/examples/main.c.i
 
-CMakeFiles/run_demo.dir/examples/main.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/run_demo.dir/examples/main.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ubuntu/Desktop/PKI/examples/main.c -o CMakeFiles/run_demo.dir/examples/main.s
+CMakeFiles/run_demo.dir/examples/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/run_demo.dir/examples/main.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ubuntu/Desktop/PKI/examples/main.c -o CMakeFiles/run_demo.dir/examples/main.c.s
 
 # Object files for target run_demo
 run_demo_OBJECTS = \
-"CMakeFiles/run_demo.dir/examples/main.o"
+"CMakeFiles/run_demo.dir/examples/main.c.o"
 
 # External object files for target run_demo
 run_demo_EXTERNAL_OBJECTS =
 
-run_demo: CMakeFiles/run_demo.dir/examples/main.o
+run_demo: CMakeFiles/run_demo.dir/examples/main.c.o
 run_demo: CMakeFiles/run_demo.dir/build.make
-run_demo: libscrypt_crypto.a
+run_demo: libscrypt_crypto_static.a
 run_demo: /usr/lib/x86_64-linux-gnu/libcrypto.so
 run_demo: CMakeFiles/run_demo.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ubuntu/Desktop/PKI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable run_demo"

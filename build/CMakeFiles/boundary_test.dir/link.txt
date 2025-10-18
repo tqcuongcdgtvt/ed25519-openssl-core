@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/boundary_test.dir/tests/boundary_test.c.o -o boundary_test  libscrypt_crypto_static.a -lcheck_pic -lrt -lm -lsubunit /usr/lib/x86_64-linux-gnu/libcrypto.so 

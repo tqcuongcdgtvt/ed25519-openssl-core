@@ -69,30 +69,30 @@ include CMakeFiles/test_scrypt.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/test_scrypt.dir/flags.make
 
-CMakeFiles/test_scrypt.dir/src/test_scrypt.o: CMakeFiles/test_scrypt.dir/flags.make
-CMakeFiles/test_scrypt.dir/src/test_scrypt.o: /home/ubuntu/Desktop/PKI/src/test_scrypt.c
-CMakeFiles/test_scrypt.dir/src/test_scrypt.o: CMakeFiles/test_scrypt.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ubuntu/Desktop/PKI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/test_scrypt.dir/src/test_scrypt.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test_scrypt.dir/src/test_scrypt.o -MF CMakeFiles/test_scrypt.dir/src/test_scrypt.o.d -o CMakeFiles/test_scrypt.dir/src/test_scrypt.o -c /home/ubuntu/Desktop/PKI/src/test_scrypt.c
+CMakeFiles/test_scrypt.dir/src/test_scrypt.c.o: CMakeFiles/test_scrypt.dir/flags.make
+CMakeFiles/test_scrypt.dir/src/test_scrypt.c.o: /home/ubuntu/Desktop/PKI/src/test_scrypt.c
+CMakeFiles/test_scrypt.dir/src/test_scrypt.c.o: CMakeFiles/test_scrypt.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ubuntu/Desktop/PKI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/test_scrypt.dir/src/test_scrypt.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test_scrypt.dir/src/test_scrypt.c.o -MF CMakeFiles/test_scrypt.dir/src/test_scrypt.c.o.d -o CMakeFiles/test_scrypt.dir/src/test_scrypt.c.o -c /home/ubuntu/Desktop/PKI/src/test_scrypt.c
 
-CMakeFiles/test_scrypt.dir/src/test_scrypt.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test_scrypt.dir/src/test_scrypt.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ubuntu/Desktop/PKI/src/test_scrypt.c > CMakeFiles/test_scrypt.dir/src/test_scrypt.i
+CMakeFiles/test_scrypt.dir/src/test_scrypt.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test_scrypt.dir/src/test_scrypt.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ubuntu/Desktop/PKI/src/test_scrypt.c > CMakeFiles/test_scrypt.dir/src/test_scrypt.c.i
 
-CMakeFiles/test_scrypt.dir/src/test_scrypt.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test_scrypt.dir/src/test_scrypt.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ubuntu/Desktop/PKI/src/test_scrypt.c -o CMakeFiles/test_scrypt.dir/src/test_scrypt.s
+CMakeFiles/test_scrypt.dir/src/test_scrypt.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test_scrypt.dir/src/test_scrypt.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ubuntu/Desktop/PKI/src/test_scrypt.c -o CMakeFiles/test_scrypt.dir/src/test_scrypt.c.s
 
 # Object files for target test_scrypt
 test_scrypt_OBJECTS = \
-"CMakeFiles/test_scrypt.dir/src/test_scrypt.o"
+"CMakeFiles/test_scrypt.dir/src/test_scrypt.c.o"
 
 # External object files for target test_scrypt
 test_scrypt_EXTERNAL_OBJECTS =
 
-test_scrypt: CMakeFiles/test_scrypt.dir/src/test_scrypt.o
+test_scrypt: CMakeFiles/test_scrypt.dir/src/test_scrypt.c.o
 test_scrypt: CMakeFiles/test_scrypt.dir/build.make
-test_scrypt: libscrypt_crypto.a
+test_scrypt: libscrypt_crypto_static.a
 test_scrypt: /usr/lib/x86_64-linux-gnu/libcrypto.so
 test_scrypt: CMakeFiles/test_scrypt.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ubuntu/Desktop/PKI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable test_scrypt"

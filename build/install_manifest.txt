@@ -1,0 +1,3 @@
+/usr/local/lib/libscrypt_crypto_static.a
+/usr/local/lib/libscrypt_crypto.so
+/usr/local/include/scrypt.h

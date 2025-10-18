@@ -1,0 +1,1 @@
+/usr/bin/cc -g -pthread CMakeFiles/thread_safety_test.dir/tests/thread_safety_test.c.o -o thread_safety_test  libscrypt_crypto_static.a -lcheck_pic -lrt -lm -lsubunit /usr/lib/x86_64-linux-gnu/libcrypto.so 

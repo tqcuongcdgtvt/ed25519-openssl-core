@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/ubuntu/Desktop/PKI/src/test_scrypt.c" "CMakeFiles/test_scrypt.dir/src/test_scrypt.o" "gcc" "CMakeFiles/test_scrypt.dir/src/test_scrypt.o.d"
+  "/home/ubuntu/Desktop/PKI/src/test_scrypt.c" "CMakeFiles/test_scrypt.dir/src/test_scrypt.c.o" "gcc" "CMakeFiles/test_scrypt.dir/src/test_scrypt.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

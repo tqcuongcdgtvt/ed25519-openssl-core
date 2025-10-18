@@ -1,5 +1,17 @@
+/home/ubuntu/Desktop/PKI/build/CMakeFiles/scrypt_crypto_static.dir
 /home/ubuntu/Desktop/PKI/build/CMakeFiles/scrypt_crypto.dir
 /home/ubuntu/Desktop/PKI/build/CMakeFiles/run_demo.dir
 /home/ubuntu/Desktop/PKI/build/CMakeFiles/test_scrypt.dir
+/home/ubuntu/Desktop/PKI/build/CMakeFiles/boundary_test.dir
+/home/ubuntu/Desktop/PKI/build/CMakeFiles/interoperability_test.dir
+/home/ubuntu/Desktop/PKI/build/CMakeFiles/memory_leak_test.dir
+/home/ubuntu/Desktop/PKI/build/CMakeFiles/thread_safety_test.dir
+/home/ubuntu/Desktop/PKI/build/CMakeFiles/benchmark_test.dir
+/home/ubuntu/Desktop/PKI/build/CMakeFiles/package.dir
+/home/ubuntu/Desktop/PKI/build/CMakeFiles/package_source.dir
 /home/ubuntu/Desktop/PKI/build/CMakeFiles/edit_cache.dir
 /home/ubuntu/Desktop/PKI/build/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/Desktop/PKI/build/CMakeFiles/list_install_components.dir
+/home/ubuntu/Desktop/PKI/build/CMakeFiles/install.dir
+/home/ubuntu/Desktop/PKI/build/CMakeFiles/install/local.dir
+/home/ubuntu/Desktop/PKI/build/CMakeFiles/install/strip.dir
