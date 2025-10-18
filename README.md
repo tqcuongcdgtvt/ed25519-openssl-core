@@ -166,7 +166,7 @@ valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./interoper
 ==6265== All heap blocks were freed -- no leaks are possible
 ==6265== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 </code></pre>
-<h3> TestCase#1 - 700s/10000 lần lặp</h3>
+<h3> TestCase#2 - 700s/10000 lần lặp</h3>
 <pre><code>Debug: backend->eddsa_verify trả về 0
 Completed 10000 iterations successfully
 ==7696== HEAP SUMMARY:
