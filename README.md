@@ -57,7 +57,7 @@
                 </tr>
                  <tr>
                     <td><code>include/</code></td>
-                    <td>Chứa các khóa riêng (private keys).</td>
+                    <td>Chứa các header định nghĩa).</td>
                 </tr>
                  <tr>
                     <td><code>tests/</code></td>
@@ -263,3 +263,4 @@ Heap/luồng: ~34,082-35,430 byte.
 Tổng/luồng: ~34,880-36,578 byte.
 Đánh giá: Mức tiêu thụ thấp và ổn định, không rò rỉ.
 </code></pre>
+
